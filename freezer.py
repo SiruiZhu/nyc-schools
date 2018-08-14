@@ -7,7 +7,7 @@ app.config['FREEZER_DESTINATION'] = 'docs'
 freezer = Freezer(app)
 
 @freezer.register_generator
-def show():
+def school():
     for school in School.query.all():
         yield { 'dbn': school.dbn }
 
